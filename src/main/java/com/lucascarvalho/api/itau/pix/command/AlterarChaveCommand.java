@@ -1,50 +1,37 @@
 package com.lucascarvalho.api.itau.pix.command;
 
-import com.lucascarvalho.api.itau.pix.repository.ChaveRepository;
+import com.lucascarvalho.api.itau.pix.validate.AlterarChaveValidate;
 import com.lucascarvalho.api.itau.pix.validate.InserirChaveValidate;
 import com.lucascarvalho.api.itau.pix.validate.ValidateException;
 import org.springframework.http.HttpStatus;
 
-public class InserirChaveCommand {
+public class AlterarChaveCommand {
 
-    private String tipoChave;
-    private String valorChave;
     private String tipoConta;
     private String numeroAgencia;
     private String numeroConta;
     private String nomeCorrentista;
     private String sobrenomeCorrentista;
-    private String tipoPessoa;
 
-    public InserirChaveCommand(String tipoChave,
-                                String valorChave,
-                                String tipoConta,
-                                String numeroAgencia,
-                                String numeroConta,
-                                String nomeCorrentista,
-                                String sobrenomeCorrentista,
-                                String tipoPessoa) {
-
-        this.tipoChave = tipoChave;
-        this.valorChave = valorChave;
+    public AlterarChaveCommand(String tipoConta,
+                               String numeroAgencia,
+                               String numeroConta,
+                               String nomeCorrentista,
+                               String sobrenomeCorrentista) {
         this.tipoConta = tipoConta;
         this.numeroAgencia = numeroAgencia;
         this.numeroConta = numeroConta;
         this.nomeCorrentista = nomeCorrentista;
         this.sobrenomeCorrentista = sobrenomeCorrentista;
-        this.tipoPessoa = tipoPessoa;
     }
 
     public boolean executa() throws ValidateException {
-        InserirChaveValidate validador = new InserirChaveValidate(
-                tipoChave,
-                valorChave,
+        AlterarChaveValidate validador = new AlterarChaveValidate(
                 tipoConta,
                 numeroAgencia,
                 numeroConta,
                 nomeCorrentista,
-                sobrenomeCorrentista,
-                tipoPessoa
+                sobrenomeCorrentista
         );
 
         if (!validador.executa()) {

@@ -21,34 +21,25 @@ public class ChaveModel {
     @Column(columnDefinition = "BINARY(16)")
     private UUID    id;
     @Column(nullable = false, length = 9)
-    private String  nm_tipo_chave;
-
+    private String nmTipoChave;
     @Column(nullable = false, length = 77)
-    private String  vl_chave;
-
+    private String vlChave;
     @Column(nullable = false, length = 10)
-    private String  nm_tipo_conta;
-
+    private String nmTipoConta;
     @Column(nullable = false, length = 4)
-    private String    nu_agencia;
-
+    private String nuAgencia;
     @Column(nullable = false, length = 8)
-    private String    nu_conta;
-
+    private String nuConta;
     @Column(nullable = false, length = 30)
-    private String  nm_nome_correntista;
-
+    private String nmNomeCorrentista;
     @Column(length = 45)
-    private String  nm_sobrenome_correntista;
-
+    private String nmSobrenomeCorrentista;
     @Column(nullable = false, length = 1)
-    private String  nm_tipo_pessoa;
-
+    private String nmTipoPessoa;
     @Column(insertable = false, updatable = false)
-    private Date dt_inclusao;
-
+    private Date dtInclusao;
     @PrePersist
     void dt() {
-        this.dt_inclusao = new java.util.Date();
+        this.dtInclusao = new java.util.Date();
     }
 }

@@ -1,15 +1,11 @@
 package com.lucascarvalho.api.itau.pix.validate;
 
 import com.lucascarvalho.api.itau.pix.TipoChaveEnum;
-import com.lucascarvalho.api.itau.pix.repository.ChaveRepository;
 import com.lucascarvalho.api.itau.pix.validate.regra.*;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Optional;
 public class ValidateFactory {
 
-    @Autowired
-    private ChaveRepository chaveRepository;
     public static Optional<Regra> getInstance(String tipoDeChave, String valor) {
         Optional<TipoChaveEnum> tipo = TipoChaveEnum.getByStringDeTipoChave(tipoDeChave);
 

@@ -1,10 +1,5 @@
 package com.lucascarvalho.api.itau.pix.validate.regra;
 
-import br.com.itau.pix.core.TipoDeChavePix;
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 public class RegraEmail extends RegraAbstract<String> {
 
     public final static String ERRO_VALOR_INVALIDO = "Email inválido";

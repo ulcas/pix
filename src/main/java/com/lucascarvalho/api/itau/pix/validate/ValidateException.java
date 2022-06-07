@@ -1,5 +1,7 @@
 package com.lucascarvalho.api.itau.pix.validate;
 
+import org.springframework.http.HttpStatus;
+
 import java.util.List;
 
 public class ValidateException extends Exception {
@@ -8,7 +10,7 @@ public class ValidateException extends Exception {
 
     private List<String> erros;
 
-    public ValidateException(List<String> erros) {
+    public ValidateException(List<String> erros, HttpStatus statusCode) {
         super(erros.toString());
         this.erros = erros;
     }

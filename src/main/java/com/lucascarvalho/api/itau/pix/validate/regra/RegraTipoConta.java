@@ -1,7 +1,4 @@
 package com.lucascarvalho.api.itau.pix.validate.regra;
-
-import br.com.itau.pix.core.TipoDeChavePix;
-
 public class RegraTipoConta extends RegraAbstract<String> {
 
     public final static String ERRO_VALOR_INVALIDO = "O tipo de conta é inválido. Deve ser: corrente|poupança";
