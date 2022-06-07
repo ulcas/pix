@@ -1,8 +1,8 @@
 package com.lucascarvalho.api.itau.pix.validate.regra;
 public class RegraAleatorio extends RegraAbstract<String> {
 
-    public final static String ERRO_TAMANHO_INVALIDO = "A conta deve possuir no máximo 8 digitos";
-    public final static String ERRO_FORMATO_INVALIDO = "A conta deve possuir apenas caracteres numericos";
+    public final static String ERRO_TAMANHO_INVALIDO = "Aleatorio: A chave só pode ter até 36 caracteres";
+    public final static String ERRO_FORMATO_INVALIDO = "Aleatorio: Apenas caracteres alfanumeros são aceitos";
 
 
     public RegraAleatorio(String stringValidar) {
