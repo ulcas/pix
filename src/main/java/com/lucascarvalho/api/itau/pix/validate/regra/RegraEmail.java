@@ -2,7 +2,7 @@ package com.lucascarvalho.api.itau.pix.validate.regra;
 
 public class RegraEmail extends RegraAbstract<String> {
 
-    public final static String ERRO_VALOR_INVALIDO = "Email inválido";
+    public final static String ERRO_VALOR_INVALIDO = "Email: Email inválido";
 
     public RegraEmail(String stringValidar) {
         super(stringValidar);
